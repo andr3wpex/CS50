@@ -2,11 +2,40 @@
 
 int main()
 {
-    // 1 ask for user_input
-
-    // 2 if user input is integer and between 1 and 8 continue else go back to 1
-
-    // 3 print shape with the specified height
-
-    return(0);
+    int height, i, j, k;
+    char term;
+    do
+    {
+        printf("Please select height (1 to 8):\n");
+        scanf("%d", &height);
+        
+        for (i = 1; i <= height; i++)
+        {
+        
+        // left side
+            for (j = 1; j <= height - i; j++)
+            {
+                printf(" ");
+            }
+            for (k = 1; k <= i; k++)
+            {
+                printf("#");
+            }
+        
+        // gap
+        printf("  ");
+        
+        // right side
+        for (j = 1; j <= i; j++)
+        {
+            printf("#");
+        }
+        
+        // next line
+        printf("\n");
+        }
+    }
+    while (height < 1 || height > 8);
+    
+    return (0);
 }
